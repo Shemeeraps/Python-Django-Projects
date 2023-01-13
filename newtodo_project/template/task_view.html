@@ -1,0 +1,12 @@
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="text" name="name" placeholder="Your name">
+     <input type="text" name="priority" placeholder="Your priority">
+     <input type="date" name="date" placeholder="Your date">
+    <input type="button" name="update">
+    <input type="submit">
+</form>
+{% for i in obj1 %}
+{{i.name}}------>{{i.priority}}---->{{i.date}}<br>
+{% endfor %}
